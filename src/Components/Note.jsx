@@ -33,13 +33,18 @@ const Note = () => {
     return (
       <main className='relative bg-[#202020]'>
       <section className='flex justify-center items-center w-full h-fit'>
-        <textarea name="" ref={textContentRef}  id="" placeholder="Enter Your Note Here....." className='focus:outline-none bg-[#202020] py-3 w-[50%] min-h-screen text-white bg care caret-white placeholder-slate-400 resize-none'></textarea>
+        <textarea name="" ref={textContentRef}  id="" placeholder="Enter Your Note Here....." className='focus:outline-none bg-[#202020] px-3 py-3 w-full md:w-[50%] min-h-screen text-white bg care caret-white placeholder-slate-400 resize-none'></textarea>
       </section>
       <button onClick={()=>{
           handleDataUpload()
-        }} className='top-4 right-10 absolute flex items-center gap-3 bg-red-400 hover:bg-white shadow-md px-5 py-2 rounded-lg duration-300 group hover:outline-1'>
+        }} className='top-4 right-10 absolute md:flex items-center gap-3 hidden bg-red-400 hover:bg-white shadow-md px-5 py-2 rounded-lg duration-300 group hover:outline-1'>
           <img src="/save.png" alt="" className='w-6 h-6' />
           <h1 className='group-hover:text-black text-white'>SAVE</h1>
+        </button>
+        <button onClick={()=>{
+          handleDataUpload()
+        }} className='right-4 bottom-4 absolute flex items-center gap-3 md:hidden bg-red-400 hover:bg-white shadow-md p-4 rounded-full duration-300 group hover:outline-1'>
+          <img src="/save.png" alt="" className='w-6 h-6' />
         </button>
       <div><Toaster/></div>
       </main>
